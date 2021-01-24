@@ -6,19 +6,9 @@
    <description>Recent content on Max Rath</description>
    <generator>Hugo -- gohugo.io</generator>
    <copyright>Copyright &amp;copy; 2021 - Maximilian Rath</copyright>
-   <lastBuildDate>Sun, 24 Jan 2021 17:06:22 +0100</lastBuildDate>
    
        <atom:link href="https://blog.mxrt.de/index.xml" rel="self" type="application/rss+xml" />
    
-   
-     <item>
-       <title>Stable Reduction of Curves</title>
-       <link>https://blog.mxrt.de/posts/stable-reduction-of-curves/</link>
-       <pubDate>Sun, 24 Jan 2021 17:06:22 +0100</pubDate>
-       
-       <guid>https://blog.mxrt.de/posts/stable-reduction-of-curves/</guid>
-       <description>&lt;p&gt;Three years  ago in the last year of my bachelor studies, while writing my thesis in algebraic geometry, I decided to take a seminar called&amp;ldquo;Stable Reduction Of Curves&amp;rdquo;. It seemed intriguing: prerequesites were basics of scheme theory (i.e. Chapter II and parts of Chapter III of Harthsorne), the seminar was run by a renowned arithmetic geometer and so far I hadn&amp;rsquo;t seen many applications of all that wondrous and intimidating machinery that is scheme based algebraic geometry to number theory.&lt;/p&gt;&lt;p&gt;And see, that&amp;rsquo;s also kind of where the problem with this seminar laid: I hadn&amp;rsquo;t really seen much algebraic number theory so far. I didn&amp;rsquo;t even knowwhat quadratic reciprocity was! (And I still don&amp;rsquo;t &lt;em&gt;really&lt;/em&gt; know, if I&amp;rsquo;m being honest.) So even while I understood &amp;ldquo;my&amp;rdquo; small corner of the proof, I never really made sense of the big picture. Now, three years later (and, because I switched fields, with no additional algebraic geometry knowledge at my disposal), I&amp;rsquo;ll try to understand what exactly we tried to proof there.&lt;/p&gt;&lt;p&gt;The seminar was based on a &lt;a href=&#34;https://core.ac.uk/download/pdf/82106467.pdf&#34;&gt;paper by Artin and Winters&lt;/a&gt;, which (re-)proved the following theorem:&lt;/p&gt;&lt;div class=&#34;theorem&#34;&gt;    &lt;div class=&#34;theorem-header&#34;&gt;        &lt;strong&gt;Theorem (Stable Reduction of Curves).&lt;/strong&gt;    &lt;/div&gt;    Let $C$ be a smooth proper curce of genus $g$ over the field of fractions $K$ of a discrete valuation ring $R$ with algebraically closed residue field $k$. There is a finite field extension $K&#39;$ of $K$ such that $C_{K&#39;}$ has stable reduction over the integral closure $R&#39;$ of $R$ in $K&#39;$.&lt;/div&gt;&lt;p&gt;Even though I knew most of the words, this still read like gobbledigook. Why on earth would anyone find this theorem interesting much less try to prove it?To unwrap this, I&amp;rsquo;ll zoom out to the very big picture and begin with the question &amp;ldquo;What even &lt;em&gt;is&lt;/em&gt; Arithmetic Geometry?&amp;rdquo;&lt;/p&gt;</description>
-     </item>
    
  </channel>
 </rss>
