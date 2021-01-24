@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <title>Stable Reduction of Curves - Max Rath</title>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="TBD" />
+<meta name="author" content="Max Rath" /><meta property="og:title" content="Stable Reduction of Curves" />
+<meta property="og:description" content="Three years ago in the last year of my bachelor studies, while writing my thesis in algebraic geometry, I decided to take a seminar called
+&ldquo;Stable Reduction Of Curves&rdquo;. It seemed intriguing: prerequesites were basics of scheme theory (i.e. Chapter II and parts of Chapter III of Harthsorne)
+, the seminar was run by a renowned arithmetic geometer and so far I hadn&rsquo;t seen many applications of all that wondrous and intimidating machinery that is scheme based algebraic geometry to number theory." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mxrth.github.io/posts/stable-reduction-of-curves/" />
+<meta property="article:published_time" content="2021-01-24T17:06:22+01:00" />
+<meta property="article:modified_time" content="2021-01-24T17:06:22+01:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Stable Reduction of Curves"/>
+<meta name="twitter:description" content="Three years ago in the last year of my bachelor studies, while writing my thesis in algebraic geometry, I decided to take a seminar called
+&ldquo;Stable Reduction Of Curves&rdquo;. It seemed intriguing: prerequesites were basics of scheme theory (i.e. Chapter II and parts of Chapter III of Harthsorne)
+, the seminar was run by a renowned arithmetic geometer and so far I hadn&rsquo;t seen many applications of all that wondrous and intimidating machinery that is scheme based algebraic geometry to number theory."/>
+
+<meta name="generator" content="Hugo 0.80.0" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {delimiters: [
+          { left: '$$', right: '$$', display: true},
+          { left: '$', right: '$', display: false}
+        ]});"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://mxrth.github.io/fontawesome/css/all.min.css" />
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  
+  
+  <link rel="stylesheet" type="text/css" href="https://mxrth.github.io/css/styles.css" /><link rel='stylesheet' href='https://mxrth.github.io/math.css'></head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="https://mxrth.github.io/">Max Rath</a>
+            </h1>
+
+      <ul id="social-media">
+             <li>
+               <a href="https://github.com/mxrth" title="GitHub">
+               <i class="fab fa-github fa-lg"></i>
+               </a>
+             </li>
+             <li>
+               <a href="https://twitter.com/mx_rth" title="Twitter">
+               <i class="fab fa-twitter fa-lg"></i>
+               </a>
+             </li>
+      </ul>
+      
+      <p><em>A Blog</em></p>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://mxrth.github.io/about/">
+                <i class="fa-li fa  fa-lg"></i><span>About</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>Stable Reduction of Curves</h1>
+
+    
+      <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2021-01-24T17:06:22&#43;01:00">Jan 24, 2021</time>
+        </li>
+        
+        
+
+        
+
+        <li>2 minutes read</li>
+    </ul>
+</aside>
+
+    
+
+    
+
+
+    <p>Three years ago in the last year of my bachelor studies, while writing my thesis in algebraic geometry, I decided to take a seminar called
+&ldquo;Stable Reduction Of Curves&rdquo;. It seemed intriguing: prerequesites were basics of scheme theory (i.e. Chapter II and parts of Chapter III of Harthsorne)
+, the seminar was run by a renowned arithmetic geometer and so far I hadn&rsquo;t seen many applications of all that wondrous and intimidating machinery that is scheme based algebraic geometry to number theory.</p>
+<p>And see, that&rsquo;s also kind of where the problem with this seminar laid: I hadn&rsquo;t really seen much algebraic number theory so far. I didn&rsquo;t even know
+what quadratic reciprocity was! (And I still don&rsquo;t <em>really</em> know, if I&rsquo;m being honest.) So even while I understood &ldquo;my&rdquo; small corner of the proof, I never really made sense of the big picture. Now, three years later (and, because I switched fields, with no additional algebraic geometry knowledge at my disposal), I&rsquo;ll try to understand what exactly we tried to proof there.</p>
+<p>The seminar was based on a <a href="https://core.ac.uk/download/pdf/82106467.pdf">paper by Artin and Winters</a>, which (re-)proved the following theorem:</p>
+
+<div class="theorem">
+    <div class="theorem-header">
+        <strong>Theorem (Stable Reduction of Curves).</strong>
+    </div>
+    Let $C$ be a smooth proper curce of genus $g$ over the field of fractions $K$ of a discrete valuation ring $R$ with algebraically closed residue field $k$. There is a finite field extension $K'$ of $K$ such that $C_{K'}$ has stable reduction over the integral closure $R'$ of $R$ in $K'$.
+</div>
+<br>
+<p>Even though I knew most of the words, this still read like gobbledigook. Why on earth would anyone find this theorem interesting much less try to prove it?
+To unwrap this, I&rsquo;ll zoom out to the very big picture and begin with the question &ldquo;What even <em>is</em> Arithmetic Geometry?&rdquo;</p>
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        
+    </ul>
+</section>
+  
+    
+    
+  
+
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright © 2021 - Maximilian Rath |
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="https://mxrth.github.ioindex.xml">Subscribe </a></h6>
+    </footer>
+</div>
+<script src="https://mxrth.github.io/js/scripts.js"></script>
+
+
+</body>
+
+</html>
+
