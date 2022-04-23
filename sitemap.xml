@@ -2,14 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.mxrt.de/about/</loc>
-    <lastmod>2021-01-24T15:25:10+01:00</lastmod>
-  </url><url>
     <loc>https://blog.mxrt.de/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.mxrt.de/posts/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.mxrt.de/posts/pqcrypto-news/</loc>
+    <lastmod>2022-04-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.mxrt.de/about/</loc>
+    <lastmod>2021-01-24T15:25:10+01:00</lastmod>
   </url><url>
     <loc>https://blog.mxrt.de/posts/stable-reduction-of-curves/</loc>
     <lastmod>2020-04-03T00:00:00+00:00</lastmod>
